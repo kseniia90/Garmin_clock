@@ -1,0 +1,435 @@
+<style type="text/css">
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+    .frontInfo {
+        margin: 40px 0 0;
+    }
+
+    .frontInfo .layout-wrap {
+        padding: 0 !important;
+        max-width: none !important;
+    }
+
+    .wrapper-grm {
+        font-family: 'Open Sans';
+        font-weight: 400;
+        font-size: 16px !important;
+        line-height: 1.4 !important;
+    }
+
+    .container-grm {
+        max-width: 1440px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .block-grm p,
+    .block-grm h2,
+    .block-grm h3 {
+        margin: 0;
+    }
+
+    .block-grm {
+        margin-bottom: 96px;
+    }
+
+    .block-grm h2 {
+        font-family: 'Montserrat';
+        font-weight: 500 !important;
+        font-size: 40px !important;
+        line-height: normal;
+        margin-bottom: 48px;
+    }
+
+    .blue-text-grm {
+        color: #1777FF;
+    }
+
+    .grm_margin-bottom {
+        margin-bottom: 48px;
+    }
+
+    .img-grm {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover;
+    }
+
+    .text-grm {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .list-grm {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 24px
+    }
+
+    .list-grm>li {
+        list-style: none;
+        padding: 0 !important;
+        padding-inline-start: 0px !important;
+        position: relative;
+        padding-left: 25px !important;
+        margin: 0 !important;
+        font-family: "Open Sans";
+        font-weight: 600;
+        font-size: 18px;
+        line-height: normal;
+    }
+
+    .list-grm>li p {
+        font-family: inherit;
+        font-weight: 400;
+        font-size: 16px !important;
+        margin-top: 8px;
+    }
+
+    .list-grm>li::before {
+        display: none;
+    }
+
+    .list-grm>li::after {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        content: "";
+        width: 5px;
+        height: 5px;
+        background-color: #000;
+        border-radius: 50%;
+    }
+
+    .block-grm_1 {
+        padding: 96px 80px 0 0;
+        color: #ffffff;
+        background-color: #11120C;
+    }
+
+    .block-grm_1 .block-grm_top {
+        padding-left: 80px;
+
+    }
+
+    .row-grm {
+        display: grid;
+        grid-template-columns: 1fr 45%;
+    }
+
+    .block-grm_1 .col-grm_1 {
+        padding: 48px 46px 86px 80px;
+        color: #11120C;
+        background: #ffffff;
+        ;
+    }
+
+    .block-grm_1 .col-grm_1>img {
+        margin-bottom: 38px;
+    }
+
+    .block-grm_1 .col-grm_img .img-grm {
+        border-radius: 0 20px 0 0;
+    }
+
+    .block-grm_2 .block-grm_top {
+        padding: 0 80px;
+    }
+
+    .block-grm_2 .row-grm {
+        display: grid;
+        grid-template-columns: 1fr 50%;
+        gap: 40px;
+        justify-content: space-between;
+        padding: 0 0 0 80px;
+    }
+
+    .block-grm_2 .row-grm h3 {
+        grid-area: 1 / 1 / 2 / 3;
+        font-family: 'Open Sans';
+        font-weight: 600;
+        font-size: 32px;
+        line-height: normal;
+    }
+
+    .block-grm_2 .row-grm .list-grm {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+
+    .block-grm_2 .row-grm .img-grm {
+        grid-area: 2 / 2 / 3 / 3;
+        border-radius: 20px 0 0 20px;
+    }
+
+    .block-grm_2 .text-grm {
+        padding: 0 80px;
+    }
+
+    .block-grm_3 {
+        margin-bottom: 0 !important;
+        padding: 96px 80px;
+        background: #FFFFFF;
+    }
+
+
+    @media (max-width: 992px) {
+        .block-grm {
+            margin-bottom: 80px;
+        }
+
+        .block-grm h2 {
+            margin-bottom: 40px;
+        }
+
+        .grm_margin-bottom {
+            margin-bottom: 40px;
+        }
+
+
+        .block-grm_1 {
+            padding: 80px 40px 0 0;
+        }
+
+        .block-grm_1 .block-grm_top {
+            padding-left: 40px;
+
+        }
+
+        .block-grm_1 .col-grm_1 {
+            padding: 40px 40px 80px 40px;
+        }
+
+        .block-grm_2 .block-grm_top {
+            padding: 0 40px;
+        }
+
+        .block-grm_2 .row-grm {
+            padding: 0 0 0 40px;
+        }
+
+        .block-grm_2 .text-grm {
+            padding: 0 40px;
+        }
+
+        .block-grm_3 {
+            padding: 80px 40px;
+        }
+    }
+
+
+    @media (max-width: 768px) {
+
+        .about {
+            padding-inline: 0;
+        }
+
+        .mm-wrapper {
+            padding: 0px 16px;
+        }
+
+        .mm-wrapper .about {
+            padding: 0;
+            padding-inline: 0;
+            margin: 0 -16px;
+        }
+
+        .wrapper-grm {
+            font-size: 14px !important;
+        }
+
+        .block-grm {
+            margin-bottom: 80px;
+
+        }
+
+        .block-grm h2 {
+            font-size: 28px !important;
+            margin-bottom: 32px;
+        }
+
+        .list-grm {
+            gap: 16px
+        }
+
+        .list-grm>li {
+            padding-left: 25px !important;
+            font-size: 16px;
+        }
+
+        .list-grm>li p {
+            font-size: 14px !important;
+        }
+
+        .block-grm_1 {
+            padding: 50px 0 0;
+            border-radius: 0;
+        }
+
+        .block-grm_1 .block-grm_top {
+            padding: 0 20px;
+        }
+
+        .row-grm {
+            grid-template-columns: 1fr;
+        }
+
+        .block-grm_1 .col-grm_img {
+            order: -1;
+        }
+
+        .block-grm_1 .col-grm_1 {
+            padding: 40px 20px 0;
+        }
+
+        .block-grm_1 .col-grm_img .img-grm {
+            border-radius: 0;
+        }
+
+        .block-grm_2 .block-grm_top {
+            padding: 0 20px;
+        }
+
+        .block-grm_2 .row-grm {
+            grid-template-columns: 1fr;
+            gap: 32px;
+            padding: 0;
+        }
+
+        .block-grm_2 .row-grm h3 {
+            grid-area: unset;
+            font-size: 24px;
+            padding: 0 20px;
+        }
+
+        .block-grm_2 .row-grm .list-grm {
+            grid-area: unset;
+            padding: 0 20px;
+        }
+
+        .block-grm_2 .row-grm .img-grm {
+            grid-area: unset;
+            border-radius: 0;
+            order: -1;
+            padding-bottom: 8px;
+        }
+
+        .block-grm_2 .text-grm {
+            padding: 0 20px;
+        }
+
+        .block-grm_3 {
+            padding: 0 20px 80px;
+        }
+    }
+</style>
+<div class="about">
+    <div class="wrapper-grm">
+
+        <section class="about-grm">
+            <div class="block-grm block-grm_1">
+                <div class="block-grm_top grm_margin-bottom container-grm">
+                    <h2><span class="blue-text-grm">Технології 21 століття</span> – інтерактивне обладнання для
+                        виставок та презентацій,
+                        для офісу, школи та дому</h2>
+                    <p>Світ інновацій доступний кожному в нашому фірмовому гіпермаркеті професійного інтерактивного
+                        обладнання.
+                        Впроваджуйте новітні методи навчання та реклами, спрощуйте робочий процес, використовуючи
+                        нові досягнення науки
+                        та техніки. Про яку б сферу діяльності не йшлося: університети, дитячі садки, школи,
+                        розважально-торговельні
+                        центри, лікарні, музеї, центри реабілітації – на grmeractiv.com.ua Ви знайдете гідний вибір
+                        «розумної»
+                        електроніки за якістю та ціною.</p>
+                </div>
+
+                <div class="row-grm container-grm">
+                    <div class="col-grm col-grm_1">
+                        <img src="/content/uploads/images/rocket-launch.png" alt="icon" width="63" height="63">
+                        <div class="text-grm">
+                            <p><b>Наше завдання</b> – допомогти Вам та Вашому бізнесу розвиватися та досягати успіху
+                                з використанням сучасних технологій.</p>
+                            <p>Будь-яке побажання та вимоги замовника врахуємо та підберемо готове рішення.</p>
+                        </div>
+                    </div>
+                    <div class="col-grm col-grm_img">
+                        <img class="img-grm img-grm_1"
+                            src="/content/uploads/images/1-grmeraktyvne-obladnannia-na-grmeractiv.com.ua.png"
+                            alt="grmro" width="612" height="361">
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="block-grm block-grm_2">
+
+                <div class="block-grm_top grm_margin-bottom container-grm">
+                    <h2><span class="blue-text-grm">Доступні категорії</span> інтерактивних пристроїв</h2>
+                    <p>Наша компанія здійснює діяльність з 2013 року. Співпрацюємо з багатьма провідними виробниками
+                        інтерактивного обладнання в Україні та за кордоном. У каталозі магазину зібрано широкий
+                        асортимент товарів. Частина обладнання – універсального призначення, проте знайдуться й
+                        вузькоспеціалізовані пристрої.</p>
+                </div>
+
+                <div class="row-grm grm_margin-bottom container-grm">
+                    <h3>Короткий перелік категорій обладнання:</h3>
+                    <img class="img-grm img-grm_2"
+                        src="/content/uploads/images/2-grmeraktyvne-obladnannia-na-grmeractiv.com.ua-1280-853.jpg"
+                        alt="grmro" width="612" height="361">
+
+                    <ul class="list-grm">
+                        <li>Інтерактивні дошки;</li>
+                        <li>Проєктори;</li>
+                        <li>Інтерактивні панелі;</li>
+                        <li>Інтерактивні столи;</li>
+                        <li>Інтерактивні підлоги та пісочниці;</li>
+                        <li>Цифрові вивіски: <p>інтерактивні кіоски, відеостіни, тотеми, шелфтокери;</p>
+                        </li>
+                        <li>Інтерактивні кімнати;</li>
+                        <li>Документ-камери, ламінатори, 3D-принтери;</li>
+                        <li>Акустичні кабіни для офісу;</li>
+                        <li>Рекламне голографічне 3D-обладнання;</li>
+                        <li>Кріплення, стійки та інші аксесуари для обладнання. </li>
+                    </ul>
+
+                </div>
+
+                <div class="text-grm container-grm">
+                    <p>Каталог товарів на grmeractiv.com.ua періодично поповнюється креативними новинками. Ми дивимося в
+                        майбутнє,
+                        відстежуючи свіжі ідеї та тенденції у світі інтерактивного обладнання, адже все більше компаній
+                        приходять на
+                        ринок України з цікавими пропозиціями.</p>
+                    <p>Вся представлена в магазині продукція є надійною та довговічною, оскільки виготовлена з якісних
+                        матеріалів
+                        відповідно до міжнародних стандартів. Інтерактивні пристрої легко встановлюються і прості в
+                        експлуатації. До
+                        кожного товару надається вся необхідна документація, зокрема гарантійний талон та інструкція.
+                    </p>
+                </div>
+            </div>
+
+            <div class="block-grm block-grm_3">
+                <div class="container-grm">
+                    <h2>Де купити фірмове інтерактивне обладнання в Україні – <span class="blue-text-grm">Ви вже
+                            знаєте!</span></h2>
+                    <p>Наш онлайн-гіпермаркет працює без перерв на вихідні. Київ, Вінниця, Харків, Львів – ми подбаємо
+                        про
+                        оперативну доставку обладнання до будь-якого міста України. Готові надати консультацію у разі
+                        виникнення питань, допоможемо зорієнтуватися в асортименті продукції та запропонуємо різні
+                        варіанти
+                        під розв'язувані завдання. Наші менеджери на зв'язку з 9:00 до 19:00. Ви можете замовити на
+                        сайті
+                        дзвінок і Вам зателефонують. </p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+</div>
