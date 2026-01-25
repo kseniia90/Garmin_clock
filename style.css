@@ -184,9 +184,10 @@ html {
 }
 
 .section-grm {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     scroll-margin-top: 30px;
-    padding-bottom: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .section-grm:nth-child(even) {
@@ -376,9 +377,10 @@ html {
     }
 
     .section-grm {
-        margin-bottom: 30px;
+        margin-bottom: 10px;
         scroll-margin-top: 20px;
-        padding-bottom: 30px;
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
 
     .section-grm-top {
