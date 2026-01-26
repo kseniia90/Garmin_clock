@@ -1,6 +1,22 @@
 <style type="text/css">
-    html {
+    @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+   html {
         scroll-behavior: smooth;
+    }
+
+    .layout-aside {
+        display: none !important;
+    }
+
+    .wrapper, .layout-wrapper {
+        padding: 0 !important;
+        max-width: 100% !important;
+    }
+
+    .main {
+        overflow-x: hidden;
     }
 
     * {
@@ -15,10 +31,37 @@
         line-height: 22px !important;
     }
 
-    .container-grm {
-        max-width: 1388px;
+    .breadcrumbs,
+    .main-h,
+    .article-meta,
+    .article__meta,
+    .likely,
+    .reviews,
+    .baseboard,
+    .footer__container,
+    .container-grm,
+    .heading--xl,
+    .other-news {
+        max-width: 1440px;
+        padding-left: 20px;
+        padding-right: 20px;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .article .likely {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .heading--xl {
+        font-weight: 600;
+        margin: 1rem auto;
+    }
+
+    .breadcrumbs {
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 
     .wrapper-grm p,
@@ -183,12 +226,12 @@
 
     .section-grm {
         margin-bottom: 20px;
-        scroll-margin-top: 30px;
+        scroll-margin-top: 70px;
         padding-top: 30px;
         padding-bottom: 30px;
     }
 
-    .section-grm:nth-child(even) {
+    .section-grm:nth-child(even):not(.section-grm-geo) {
         background: #EEF8FC;
     }
 
@@ -368,6 +411,7 @@
         }
 
         .table-grm__item {
+            margin: 0 -8px;
             padding: 10px 8px;
             gap: 5px;
             font-size: 13px !important;
@@ -376,9 +420,7 @@
 
         .section-grm {
             margin-bottom: 10px;
-            scroll-margin-top: 20px;
             padding-top: 20px;
-            padding-bottom: 20px;
         }
 
         .section-grm-top {
@@ -444,9 +486,7 @@
     <div class="wrapper-grm">
         <section class="about-grm">
 
-            <div class="block-grm block-grm_1">
-                <div class="container-grm">
-
+            <div class="block-grm block-grm_1 container-grm">
                     <div class="text-grm">
                         <p><strong>Багато з нас під час вибору подарунка ставлять собі питання:</strong> чи можна
                             орієнтуватися на знак
@@ -475,8 +515,6 @@
                             Зодіаку. Отже, вибір подарунка
                             стане більш усвідомленим і емоційно теплішим.</p>
                     </div>
-                </div>
-
             </div>
 
             <div class="block-grm block-grm_2">
