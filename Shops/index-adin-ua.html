@@ -1,0 +1,653 @@
+<style type="text/css">
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    @import "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css";
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    .layout-aside {
+        display: none !important;
+    }
+
+    .wrapper,
+    .layout-wrapper {
+        padding: 0 !important;
+        max-width: 100% !important;
+    }
+
+    .main {
+        overflow-x: hidden;
+    }
+
+    .breadcrumbs,
+    .main-h,
+    .article-meta,
+    .article__meta,
+    .likely,
+    .reviews,
+    .baseboard,
+    .footer__container,
+    .container-grm,
+    .heading--xl,
+    .other-news {
+        max-width: 1440px;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .heading--xl {
+        font-weight: 600;
+        margin: 1rem auto;
+    }
+
+    .breadcrumbs {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    * {
+        box-sizing: border-box;
+        font-family: 'Montserrat';
+    }
+
+    .wrapper-grm {
+        font-family: 'Montserrat';
+        font-weight: 500;
+        font-size: 16px !important;
+        line-height: 25px !important;
+    }
+
+    .container-grm {
+        max-width: 1360px;
+        padding: 0 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .wrapper-grm p,
+    .wrapper-grm h2,
+    .wrapper-grm h3,
+    .wrapper-grm h4,
+    .wrapper-grm h5 {
+        margin: 0;
+    }
+
+    .wrapper-grm a {
+        color: inherit !important;
+        text-decoration: none;
+        border: none !important;
+    }
+
+    .grm_mb {
+        margin-bottom: 120px;
+    }
+
+    .img-grm,
+    .img-grm img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover;
+    }
+
+    .title-grm {
+        font-weight: 700;
+        font-size: 40px !important;
+        line-height: normal;
+        margin-bottom: 48px !important;
+    }
+
+    .subtitle-grm {
+        font-weight: 700;
+        font-size: 32px !important;
+        line-height: normal;
+    }
+
+    .blue-txt-grm {
+        color: #01ABFF;
+    }
+
+    .block-grm_1 {
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+    }
+
+    .block-grm_1_item {
+        display: grid;
+        grid-template-columns: 48% 46%;
+        justify-content: space-between;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .block-grm_1_item:nth-child(2) {
+        grid-template-columns: 38% 55%;
+    }
+
+    .block-grm_1_item_text {
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+    }
+
+    .block-grm_1_item img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        aspect-ratio: 602/402;
+    }
+
+    .banner-grm {
+        color: #ffffff;
+        background: linear-gradient(106.38deg, rgba(0, 0, 0, 0.874) 23.22%, rgba(0, 0, 0, 0.38) 131.03%), url(/content/uploads/images/banner_grm.jpg) no-repeat center center;
+        background-size: cover;
+        padding: 120px 0;
+    }
+
+    .banner-grm .subtitle-grm,
+    .block-grm_2 .subtitle-grm {
+        margin-bottom: 48px !important;
+    }
+
+    .block-grm_2_item {
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+        overflow: hidden;
+        margin-bottom: 120px;
+    }
+
+    .item-grm_top {
+        width: 100%;
+        display: grid;
+        grid-template-columns: minmax(200px, 477px) minmax(200px, 477px);
+        justify-content: space-between;
+        align-items: center;
+        gap: 32px;
+    }
+
+    .item-grm_left {
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+        padding: 48px;
+        border: 2px solid #01ABFF;
+    }
+
+    .contact-item-grm {
+        display: flex;
+        gap: 16px;
+    }
+
+    .contact-item-grm .icon-grm {
+        align-self: flex-start;
+    }
+
+    .contact-item-grm h3 {
+        font-size: 24px !important;
+        line-height: normal;
+        text-transform: uppercase;
+        margin-bottom: 16px !important;
+    }
+
+    .shop-map {
+        height: 100%;
+    }
+
+    .shop-map iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+        aspect-ratio: 477/285;
+    }
+
+    .item-grm_bottom {
+        max-width: 1320px;
+        margin: 0 auto;
+    }
+
+    @media (max-width:1320px) {
+        .item-grm_bottom {
+            max-width: 100vw;
+        }
+    }
+
+    .slider-screen {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .slider-screen .swiper-slide {
+        height: auto !important;
+        aspect-ratio: 1200/800;
+    }
+
+    .shop-img_item img {
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        aspect-ratio: 1200/800;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .slider-screen .swiper-wrapper {
+        margin-bottom: 48px !important;
+    }
+
+    .slider-buttons_grm {
+        height: 38px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .slider-screen .swiper-button,
+    .slider-screen .swiper-pagination {
+        position: static !important;
+        margin: 0 !important;
+    }
+
+    .slider-screen .swiper-button-next,
+    .slider-screen .swiper-button-prev {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        width: 38px !important;
+        height: 38px !important;
+        color: #000000;
+        border-radius: 12px !important;
+        border: 1px solid #E5E5E5
+    }
+
+    .slider-screen .swiper-button-prev:after,
+    .slider-screen .swiper-button-next:after {
+        font-size: 8px !important;
+        color: #000000;
+    }
+
+    .slider-screen .swiper-pagination {
+        width: auto !important;
+    }
+
+    .slider-screen .swiper-pagination-bullet {
+        width: 15px !important;
+        height: 10px !important;
+        border: 1px solid #A7A7A7 !important;
+        opacity: 1 !important;
+        border-radius: 6px !important;
+        background-color: #DFDFE0;
+    }
+
+    .slider-screen .swiper-pagination-bullet.swiper-pagination-bullet-active {
+        background-color: #01ABFF;
+    }
+
+    @media (max-width: 768px) {
+        .wrapper-grm {
+            font-size: 12px !important;
+            line-height: 18px !important;
+        }
+
+        .grm_mb {
+            margin-bottom: 80px;
+        }
+
+        .title-grm {
+            font-size: 24px !important;
+            margin-bottom: 32px !important;
+        }
+
+        .subtitle-grm {
+            font-size: 20px !important;
+        }
+
+        .block-grm_1 {
+            gap: 40px;
+        }
+
+        .block-grm_1_item {
+            grid-template-columns: 1fr;
+        }
+
+        .block-grm_1_item:nth-child(2) {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        .block-grm_1_item_text {
+            gap: 24px;
+        }
+
+        .banner-grm {
+            padding: 80px 0;
+        }
+
+        .banner-grm .subtitle-grm,
+        .block-grm_2 .subtitle-grm {
+            margin-bottom: 32px !important;
+        }
+
+        .block-grm_2_item {
+            gap: 32px;
+            margin-bottom: 80px;
+        }
+
+        .item-grm_top {
+            grid-template-columns: 1fr;
+        }
+
+        .item-grm_left {
+            gap: 32px;
+        }
+
+        .contact-item-grm h3 {
+            font-size: 16px !important;
+            margin-bottom: 8px !important;
+        }
+
+        .item-grm_bottom {
+            max-width: 100vw;
+        }
+
+        .slider-screen {
+            margin: 0;
+        }
+
+        .slider-screen .swiper-wrapper {
+            margin-bottom: 32px !important;
+        }
+
+        .slider-screen .swiper-pagination {
+            display: none !important;
+        }
+
+    }
+</style>
+<main>
+    <div class="wrapper-grm">
+        <section class="shops-grm">
+            <div class="container-grm grm_mb">
+                <h1 class="title-grm">Контактна інформація</h1>
+                <div class="block-grm_1">
+                    <div class="block-grm_1_item">
+                        <div class="block-grm_1_item_text">
+                            <p>Наші фізичні магазини – це фірмові виставково-торговельні зали, де представлена
+                                продукція американського бренду <strong>Garmin</strong>. На скляних вітринах
+                                виставлені десятки зразків смарт-годинників із різних колекцій для спорту,
+                                військових, туризму і не тільки, що дає змогу покупцям у зручному форматі
+                                переглянути гаджети, приміряти і вибрати відповідну модель.</p>
+                            <p>Окрім смарт-годинників, магазини у Львові та Дніпрі пропонують відвідувачам
+                                ознайомитися із сучасними інтерактивними панелями для освіти та бізнесу, зокрема від
+                                брендів <strong>INTBOARD</strong> та <strong>Prestigio.</strong></p>
+                        </div>
+                        <div class="img-grm">
+                            <img src="/content/uploads/images/img_grm_1.jpg" alt="intro">
+                        </div>
+                    </div>
+                    <div class="block-grm_1_item">
+                        <div class="img-grm">
+                            <img src="/content/uploads/images/img_grm_2.jpg" alt="intro">
+                        </div>
+                        <div class="block-grm_1_item_text">
+                            <p>Задля комфорту клієнтів у кожному магазині передбачено диванну зону, де можна
+                                відпочити і обміркувати покупку. Також біля кожного магазину Garmin є зручна
+                                парковка.</p>
+                            <p><strong>Для військовослужбовців ЗСУ, НГУ, ТРО надаємо знижку на всі товари.</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="banner-grm grm_mb">
+                <div class="container-grm">
+                    <h2 class="subtitle-grm">Ми будемо раді бачити вас у наших офлайн-магазинах авторизованого
+                        дилера <span class="blue-txt-grm">Garmin!</span></h2>
+                    <p>Приходьте і насолоджуйтеся дружньою атмосферою, де на вас чекають не тільки широкий вибір
+                        новинок, але й професійна допомога продавців-консультантів під час вибору.</p>
+                </div>
+            </div>
+            <div class="block-grm_2">
+                <div class="container-grm">
+                    <h2 class="subtitle-grm">Адреси наших фізичних магазинів:</h2>
+                </div>
+
+                <div class="block-grm_2_item">
+                    <div class="item-grm_top container-grm">
+                        <div class="item-grm_content item-grm_left">
+                            <div class="contact-item-grm">
+                                <img src="/content/uploads/images/icon_map_grm.png" alt="icon" class="icon-grm">
+                                <div>
+                                    <h3>м. Дніпро</h3>
+                                    <p>проспект Дмитра Яворницького, 94А, магазин «GARMIN», 49027</p>
+                                </div>
+                            </div>
+                            <div class="contact-item-grm">
+                                <img src="/content/uploads/images/icon_phone_grm.png" alt="icon" class="icon-grm">
+                                <a href="tel:+380930012255">+380930012255</a>
+                            </div>
+                        </div>
+                        <div class="item-grm_content shop-map">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2645.1032231936492!2d35.02442367677679!3d48.47373362769845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbfd2cd393d0d5%3A0x60a877e562d020fa!2sGarminn!5e0!3m2!1suk!2sua!4v1772295581589!5m2!1suk!2sua"
+                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                    <div class="item-grm_bottom">
+                        <div class="slider-screen">
+                            <div class="shop-img_slider">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide shop-img_item">
+                                        <div class="shop-img_slider__item-img-block">
+                                            <img src="/content/uploads/images/shop_dnypro_img-1.jpg" alt="shop_img">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide shop-img_item">
+                                        <div class="shop-img_slider__item-img-block">
+                                            <img src="/content/uploads/images/shop_dnypro_img-2.jpg" alt="shop_img">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide shop-img_item">
+                                        <div class="shop-img_slider__item-img-block">
+                                            <img src="/content/uploads/images/shop_dnypro_img-3.jpg" alt="shop_img">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide shop-img_item">
+                                        <div class="shop-img_slider__item-img-block">
+                                            <img src="/content/uploads/images/shop_dnypro_img-4.jpg" alt="shop_img">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide shop-img_item">
+                                        <div class="shop-img_slider__item-img-block">
+                                            <img src="/content/uploads/images/shop_dnypro_img-5.jpg" alt="shop_img">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide shop-img_item">
+                                        <div class="shop-img_slider__item-img-block">
+                                            <img src="/content/uploads/images/shop_dnypro_img-6.jpg" alt="shop_img">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slider-buttons_grm">
+                                    <div class="swiper-button swiper-button-prev"></div>
+                                    <div class="swiper-pagination"></div>
+                                    <div class="swiper-button swiper-button-next"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="block-grm_2_item">
+                    <div class="item-grm_top container-grm">
+                        <div class="item-grm_content item-grm_left">
+                            <div class="contact-item-grm">
+                                <img src="/content/uploads/images/icon_map_grm.png" alt="icon" class="icon-grm">
+                                <div>
+                                    <h3>м. Київ</h3>
+                                    <p>Харківське шосе, 4 (Дарницька площа), фірмовий магазин «Garmin», 02059
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="contact-item-grm">
+                                <img src="/content/uploads/images/icon_phone_grm.png" alt="icon" class="icon-grm">
+                                <a href="tel:+380930012228">+380930012228</a>
+                            </div>
+                        </div>
+                        <div class="item-grm_content shop-map">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2541.0378690734333!2d30.624895876865615!3d50.440395288087394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c5c377fa8bef%3A0x2482751ff65da99a!2sGarmin!5e0!3m2!1suk!2sua!4v1772302795646!5m2!1suk!2sua"
+                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                    <div class="item-grm_bottom">
+                        <div class="slider-screen">
+                            <div class="shop-img_slider">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide shop-img_item">
+                                        <div class="shop-img_slider__item-img-block">
+                                            <img src="/content/uploads/images/shop_kyiv_img-1.jpg" alt="shop_img">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide shop-img_item">
+                                        <div class="shop-img_slider__item-img-block">
+                                            <img src="/content/uploads/images/shop_kyiv_img-2.jpg" alt="shop_img">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide shop-img_item">
+                                        <div class="shop-img_slider__item-img-block">
+                                            <img src="/content/uploads/images/shop_kyiv_img-3.jpg" alt="shop_img">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide shop-img_item">
+                                        <div class="shop-img_slider__item-img-block">
+                                            <img src="/content/uploads/images/shop_kyiv_img-4.jpg" alt="shop_img">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide shop-img_item">
+                                        <div class="shop-img_slider__item-img-block">
+                                            <img src="/content/uploads/images/shop_kyiv_img-5.jpg" alt="shop_img">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide shop-img_item">
+                                        <div class="shop-img_slider__item-img-block">
+                                            <img src="/content/uploads/images/shop_kyiv_img-6.jpg" alt="shop_img">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slider-buttons_grm">
+                                    <div class="swiper-button swiper-button-prev"></div>
+                                    <div class="swiper-pagination"></div>
+                                    <div class="swiper-button swiper-button-next"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="block-grm_2_item">
+                    <div class="item-grm_top container-grm">
+                        <div class="item-grm_content item-grm_left">
+                            <div class="contact-item-grm">
+                                <img src="/content/uploads/images/icon_map_grm.png" alt="icon" class="icon-grm">
+                                <div>
+                                    <h3>м. Львів</h3>
+                                    <p>вул. Дарії Гусяк, 9 (вхід з вулиці  Ляйнберга), фірмовий магазин
+                                        «Garmin», 79000</p>
+                                </div>
+                            </div>
+                            <div class="contact-item-grm">
+                                <img src="/content/uploads/images/icon_phone_grm.png" alt="icon" class="icon-grm">
+                                <a href="tel:+380931151030">+380931151030</a>
+                            </div>
+                        </div>
+                        <div class="item-grm_content shop-map">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d901.2471521445589!2d24.02084536810658!3d49.8455401622673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473addea06485e05%3A0xd438e2657438c4b6!2sGarmin!5e0!3m2!1suk!2sua!4v1772303331273!5m2!1suk!2sua"
+                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                    <div class="item-grm_bottom">
+                        <div class="slider-screen">
+                            <div class="shop-img_slider">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide shop-img_item">
+                                        <div class="shop-img_slider__item-img-block">
+                                            <img src="/content/uploads/images/shop_lviv_img-1.jpg" alt="shop_img">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide shop-img_item">
+                                        <div class="shop-img_slider__item-img-block">
+                                            <img src="/content/uploads/images/shop_lviv_img-2.jpg" alt="shop_img">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide shop-img_item">
+                                        <div class="shop-img_slider__item-img-block">
+                                            <img src="/content/uploads/images/shop_lviv_img-3.jpg" alt="shop_img">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide shop-img_item">
+                                        <div class="shop-img_slider__item-img-block">
+                                            <img src="/content/uploads/images/shop_lviv_img-4.jpg" alt="shop_img">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide shop-img_item">
+                                        <div class="shop-img_slider__item-img-block">
+                                            <img src="/content/uploads/images/shop_lviv_img-5.jpg" alt="shop_img">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide shop-img_item">
+                                        <div class="shop-img_slider__item-img-block">
+                                            <img src="/content/uploads/images/shop_lviv_img-6.jpg" alt="shop_img">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide shop-img_item">
+                                        <div class="shop-img_slider__item-img-block">
+                                            <img src="/content/uploads/images/shop_lviv_img-7.jpg" alt="shop_img">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slider-buttons_grm">
+                                    <div class="swiper-button swiper-button-prev"></div>
+                                    <div class="swiper-pagination"></div>
+                                    <div class="swiper-button swiper-button-next"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiperOurWorks = new Swiper(".shop-img_slider", {
+            loop: true,
+            slidesPerView: 1,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+            },
+        });
+    </script>
+
+</main>
